@@ -1,0 +1,77 @@
+@import "./variables";
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Courier New", Courier, monospace;
+}
+body {
+  background: $themeColor;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+}
+img {
+  height: 4rem;
+  border-radius: 5px;
+  // height: ;
+}
+p {
+  display: flex;
+  align-items: center;
+}
+span {
+  height: 2.5rem;
+  display: block;
+}
+.all-lessons {
+  display: grid;
+  grid-template-columns: auto auto auto;
+  // justify-content: center;
+  text-align: center;
+  background-color: $glassColor;
+  width: max-content;
+  margin: 2rem auto 2rem;
+  border-radius: 1rem;
+  box-shadow: $allLessonShadow;
+}
+.lesson {
+  background-color: $lessonColor;
+  border-radius: 0.75rem;
+  margin: 1rem 1rem;
+  padding: 0.45rem;
+  width: 20rem;
+  height: 10rem;
+  display: inline-flex;
+  justify-content: start;
+  align-items: center;
+}
+.header {
+  background-color: $headerColor;
+  // display: inline;
+  text-align: center;
+  padding: 0.2rem;
+  width: 70%;
+  margin: 1rem auto 0;
+
+  border-radius: 7px 7px 0 0;
+}
+.title {
+  background-color: $titleColor;
+  // display: inline;
+  text-align: center;
+  padding: 0.2rem;
+  width: 70%;
+  margin: auto;
+  border-radius: 0 0 7px 7px;
+}
+
+@media screen and (max-width: $xlScreen) {
+  .all-lessons {
+    grid-template-columns: auto auto;
+  }
+}
+@media screen and (max-width: $smScreen) {
+  .all-lessons {
+    grid-template-columns: 12fr;
+  }
+}
